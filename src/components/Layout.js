@@ -5,6 +5,10 @@ import { StaticQuery, graphql } from "gatsby"
 import Navbar from '../components/Navbar'
 import './all.sass'
 
+import { Grommet, Box, Button } from 'grommet';
+
+
+
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -37,6 +41,14 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
         <Navbar />
+
+        {/* Sketch out grommet components */}
+        <Grommet>
+          <Box width="medium">
+            <Button primary label="Just a test" />
+          </Box>
+        </Grommet>
+        
         <div>{children}</div>
       </div>
     )}
