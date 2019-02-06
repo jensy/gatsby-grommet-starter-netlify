@@ -7,15 +7,6 @@ import Navbar from "../components/Navbar";
 import { Grommet, Box } from "grommet";
 import { grommet } from "grommet/themes";
 
-// const base = {
-//   global: {
-//     font: {
-//       family:
-//         "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif"
-//     }
-//   }
-// };
-
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
     query={graphql`
