@@ -3,11 +3,16 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
 
 import Navbar from '../components/Navbar'
-import './all.sass'
 
 import { Grommet, Box, Button } from 'grommet';
 
-
+const base = {
+  global: {
+    font: {
+      family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif",
+    },
+  },
+};
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -43,12 +48,12 @@ const TemplateWrapper = ({ children }) => (
         <Navbar />
 
         {/* Sketch out grommet components */}
-        <Grommet>
+        <Grommet theme={base}>
           <Box width="medium">
             <Button primary label="Just a test" />
           </Box>
         </Grommet>
-        
+
         <div>{children}</div>
       </div>
     )}
