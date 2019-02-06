@@ -4,16 +4,17 @@ import { StaticQuery, graphql } from "gatsby";
 
 import Navbar from "../components/Navbar";
 
-import { Grommet, Box, Button } from "grommet";
+import { Grommet, Box } from "grommet";
+import { grommet } from "grommet/themes";
 
-const base = {
-  global: {
-    font: {
-      family:
-        "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif"
-    }
-  }
-};
+// const base = {
+//   global: {
+//     font: {
+//       family:
+//         "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif"
+//     }
+//   }
+// };
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -69,7 +70,7 @@ const TemplateWrapper = ({ children }) => (
         </Helmet>
 
         {/* Sketch out grommet components */}
-        <Grommet theme={base}>
+        <Grommet theme={grommet}>
           <Navbar />
 
           <Box>{children}</Box>
